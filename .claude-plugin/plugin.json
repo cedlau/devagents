@@ -1,0 +1,9 @@
+{
+  "name": "devagents",
+  "version": "0.1.0",
+  "description": "Recherche scientifique et analyse de faisabilité : agents researcher/architect, commandes /sota, /feasibility-analysis et /sota-and-feasibility-analysis, avec leurs contextes, skills C++ et scripts d'acquisition de papers.",
+  "author": {
+    "name": "cedric",
+    "email": "cedric@mango3d.io"
+  }
+}

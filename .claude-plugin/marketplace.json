@@ -1,0 +1,18 @@
+{
+  "name": "perso-agents",
+  "owner": {
+    "name": "cedric",
+    "email": "cedric@mango3d.io"
+  },
+  "metadata": {
+    "description": "Marketplace personnel d'agents et d'outils pour Claude Code.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "devagents",
+      "source": "./",
+      "description": "Recherche scientifique et analyse de faisabilité : agents researcher/architect, commandes /sota, /feasibility-analysis et /sota-and-feasibility-analysis."
+    }
+  ]
+}

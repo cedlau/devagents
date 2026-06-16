@@ -1,0 +1,17 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Cache de papers récupérés par le skill paper-fetch
+.cache/papers/
+
+# PDFs et textes extraits
+*.pdf
+*-extracted.txt
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
