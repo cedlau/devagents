@@ -52,17 +52,41 @@ nécessaires**.
   qu'il n'a pas été exécuté/testé — l'étiqueter et le router vers une reproduction par exécution.
 - **Pas de troncature silencieuse** : déclarer ce qui n'a **pas** été examiné.
 
-### 3. Plan & trade-offs
+### 3. Pistes d'intégration — exploration et validation utilisateur
 
-**Plan d'implémentation incrémental** (MVP → cible) + **trade-offs** explicites.
-**Pas d'écriture de code d'implémentation** (frontière conception / implémentation).
+**Ne pas s'enfermer prématurément sur une seule solution.** Identifier **toutes les
+pistes d'intégration envisageables** (a minima les principales alternatives viables),
+même partielles, et les présenter à l'utilisateur **avant** d'en privilégier une.
 
-### 4. Sortie
+- Pour chaque piste : principe, points d'ancrage dans l'existant, ce qu'elle implique,
+  **trade-offs** explicites (coût, risque, réutilisation, impact).
+- **Soumettre ces pistes à l'utilisateur pour validation** et solliciter ses
+  suggestions : il a souvent déjà une idée de la façon dont l'intégration — ou une
+  partie d'elle — peut être réalisée. **Intégrer ses retours** avant de figer le plan.
+- Présenter les pistes **en désignant une solution recommandée** (justifiée au regard
+  des alternatives) : si l'utilisateur ne souhaite pas trancher lui-même une piste,
+  c'est cette recommandation qui sert de défaut pour la suite.
+- Ne figer le plan qu'**après** ce retour (validation, suggestion, ou recours au
+  défaut recommandé), en justifiant le choix au regard des alternatives écartées (et
+  des raisons de leur écart).
+- **Frontière atomique** : ces pistes portent sur l'**intégration dans le code** des
+  « Méthodes retenues » ; elles ne rouvrent pas le **choix des méthodes** (territoire
+  de `/sota`). Si une piste révèle qu'une méthode retenue est inadaptée, le signaler
+  en remontée vers le SOTA plutôt que de réinstruire l'état de l'art ici.
+
+### 4. Plan & trade-offs
+
+**Plan d'implémentation incrémental** (MVP → cible) sur la piste retenue + **trade-offs**
+explicites. **Pas d'écriture de code d'implémentation** (frontière conception /
+implémentation).
+
+### 5. Sortie
 
 Écrire dans `<FICHIER_SORTIE>` si fourni (sinon inline), en français. Si le fichier
 contient déjà l'état de l'art, ajouter cette analyse comme « Partie 2 » / « Annexe ».
+**Conserver la trace des pistes explorées** (retenue *et* écartées) dans la sortie.
 
-### 5. Handoff
+### 6. Handoff
 
 Analyse **seule**. Toute implémentation retenue passe ensuite par une phase
 d'implémentation, puis une revue de code. Les bugs supposés sont d'abord reproduits
@@ -74,7 +98,9 @@ par exécution avant tout diagnostic.
 |---|---|
 | Bug affirmé sans exécution | Distinction vérifié-par-lecture / hypothèse-à-reproduire (§2) |
 | « Tout couvert » | Déclarer explicitement le non-examiné (§2) |
-| Glissement vers l'implémentation | Frontière conception / implémentation (§3) |
+| Verrouillage prématuré sur une solution | Explorer toutes les pistes et les soumettre à l'utilisateur avant de converger (§3) |
+| Ignorer l'idée d'intégration de l'utilisateur | Solliciter et intégrer ses suggestions avant de figer le plan (§3) |
+| Glissement vers l'implémentation | Frontière conception / implémentation (§4) |
 
 ## Limites connues
 

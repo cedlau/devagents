@@ -47,6 +47,7 @@ d'implémentation, revue de code, reproduction des bugs par exécution) est port
 ## Note
 
 Chaque commande atomique porte sa propre checklist anti-biais (couverture temporelle,
-hiérarchie des sources et citation pour `/sota` ; vérifié-vs-hypothèse et
-non-troncature pour `/feasibility-analysis`). L'orchestrateur n'ajoute que le chaînage
-et la cohérence Partie 1 ↔ Partie 2.
+hiérarchie des sources et citation pour `/sota` ; vérifié-vs-hypothèse, non-troncature,
+exploration de **toutes** les pistes d'intégration et validation utilisateur — avec
+solution recommandée par défaut — pour `/feasibility-analysis`). L'orchestrateur
+n'ajoute que le chaînage et la cohérence Partie 1 ↔ Partie 2.
