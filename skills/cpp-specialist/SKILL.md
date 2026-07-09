@@ -39,3 +39,12 @@ description: Standards et bonnes pratiques C++ moderne (C++17/20) — gestion m�
 ### Performance (MOYENNE)
 - Utiliser `std::move` pour les paramètres "sink".
 - Utiliser `reserve()` sur les containers si la taille est connue.
+
+## Tests (Critère de Qualité)
+- Toute fonctionnalité C++ doit être couverte par des tests fiables et isolés.
+- Approche TDD (RED → GREEN → REFACTOR) et structure AAA (Arrange / Act / Assert).
+- Isolation par injection de dépendances + fakes/mocks ; jamais d'état global caché.
+- Couvrir systématiquement les cas limites (entrées nulles, vides, hors bornes)
+  et chaque branche logique (if/else, switch).
+- **Pour la mise en œuvre** (GoogleTest/GoogleMock, CMake/CTest, coverage gcov/llvm-cov,
+  sanitizers ASan/UBSan/TSan) → charger le skill `cpp-testing`.
